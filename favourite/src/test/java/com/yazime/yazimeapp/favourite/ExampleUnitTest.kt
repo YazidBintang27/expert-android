@@ -1,4 +1,4 @@
-package com.yazime.favourite
+package com.yazime.yazimeapp.favourite
 
 import org.junit.Test
 

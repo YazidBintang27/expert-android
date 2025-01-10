@@ -1,6 +1,6 @@
-package com.yazime.favourite.di
+package com.yazime.yazimeapp.favourite.di
 
-import com.yazime.favourite.presentation.favourite.FavouriteViewModel
+import com.yazime.yazimeapp.favourite.presentation.FavouriteViewModel
 import org.koin.core.module.dsl.viewModel
 import org.koin.dsl.module
 

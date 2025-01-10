@@ -1,10 +1,12 @@
 plugins {
    alias(libs.plugins.android.dynamic.feature)
    alias(libs.plugins.kotlin.android)
+   id("androidx.navigation.safeargs")
 }
 android {
-   namespace = "com.yazime.favourite"
-   compileSdk = 35
+   namespace = "com.yazime.yazimeapp.favourite"
+   compileSdk = 34
+
    defaultConfig {
       minSdk = 24
       testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -34,6 +36,6 @@ android {
 }
 
 dependencies {
-   implementation(project(":core"))
    implementation(project(":app"))
+   implementation(project(":core"))
 }

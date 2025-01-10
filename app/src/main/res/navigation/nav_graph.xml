@@ -55,7 +55,7 @@
         android:id="@+id/nav_graph_favourite"
         app:moduleName="favourite"
         app:graphResName="nav_graph_favourite"
-        app:graphPackage="com.yazime.favourite" />
+        app:graphPackage="com.yazime.yazimeapp.favourite" />
 
     <action
         android:id="@+id/action_homeFragment_to_favourite"

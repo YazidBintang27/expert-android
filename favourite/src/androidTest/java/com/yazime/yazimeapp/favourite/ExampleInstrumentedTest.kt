@@ -1,4 +1,4 @@
-package com.yazime.favourite
+package com.yazime.yazimeapp.favourite
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
@@ -19,6 +19,6 @@ class ExampleInstrumentedTest {
    fun useAppContext() {
       // Context of the app under test.
       val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-      assertEquals("com.yazime.favourite", appContext.packageName)
+      assertEquals("com.yazime.yazimeapp.favourite", appContext.packageName)
    }
 }

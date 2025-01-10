@@ -1,6 +1,5 @@
-package com.yazime.favourite.presentation.favourite
+package com.yazime.yazimeapp.favourite.presentation
 
-import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -12,9 +11,8 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
 import com.yazime.core.ui.AnimeAdapter
-import com.yazime.favourite.R
-import com.yazime.favourite.databinding.FragmentFavouriteBinding
-import com.yazime.favourite.di.favouriteModule
+import com.yazime.yazimeapp.favourite.databinding.FragmentFavouriteBinding
+import com.yazime.yazimeapp.favourite.di.favouriteModule
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.context.loadKoinModules
@@ -44,7 +42,6 @@ class FavouriteFragment : Fragment() {
       super.onViewCreated(view, savedInstanceState)
       loadKoinModules(favouriteModule)
       navController = Navigation.findNavController(view)
-      Log.d("FavouriteFrakmen", "TES AKSES")
       binding.toolbar.setNavigationOnClickListener { navController.navigateUp() }
       observeFavouriteAnime()
    }
@@ -68,7 +65,8 @@ class FavouriteFragment : Fragment() {
    }
 
    private fun getDetailAnime(id: Int) {
-
+      val action = FavouriteFragmentDirections.actionFavouriteFragmentToAnimeDetailFragment(id)
+      navController.navigate(action)
    }
 
    override fun onDestroy() {

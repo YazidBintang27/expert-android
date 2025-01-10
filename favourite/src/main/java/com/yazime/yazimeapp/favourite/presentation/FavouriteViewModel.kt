@@ -1,7 +1,6 @@
-package com.yazime.favourite.presentation.favourite
+package com.yazime.yazimeapp.favourite.presentation
 
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.asLiveData
 import com.yazime.core.domain.usecase.AnimeUseCase
 
 class FavouriteViewModel (private val animeUseCase: AnimeUseCase): ViewModel() {
