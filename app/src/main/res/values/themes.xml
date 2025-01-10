@@ -5,6 +5,7 @@
         <item name="colorPrimary">@color/primary</item>
         <item name="android:colorBackground">@color/white</item>
         <item name="colorOnBackground">@color/text</item>
+        <item name="android:windowIsTranslucent">true</item>
     </style>
 
     <style name="Theme.Yazime" parent="Base.Theme.Yazime" />
