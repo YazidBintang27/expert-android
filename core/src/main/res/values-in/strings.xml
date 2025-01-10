@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="movies_for_you">Film untuk Anda</string>
+    <string name="top_results">Hasil Teratas</string>
+    <string name="search">Cari Anime …</string>
+    <string name="profile">Profil</string>
+    <string name="setting">Pengaturan</string>
+    <string name="change_language">Ubah Bahasa</string>
+    <string name="detail">Detail</string>
+    <string name="favourite">Favorit</string>
+</resources>

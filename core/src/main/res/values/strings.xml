@@ -1,3 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="movies_for_you">Movies for you</string>
+    <string name="top_results">Top Results</string>
+    <string name="search">Search Anime …</string>
+    <string name="profile">Profile</string>
+    <string name="setting">Setting</string>
+    <string name="change_language">Change language</string>
+    <string name="detail">Detail</string>
+    <string name="favourite">Favourite</string>
 </resources>

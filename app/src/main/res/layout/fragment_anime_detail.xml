@@ -23,7 +23,7 @@
                 android:layout_height="?attr/actionBarSize"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:title="Detail"
+                app:title="@string/detail"
                 app:titleCentered="true"
                 app:navigationIcon="@drawable/arrow_left_02_stroke_rounded"
                 app:navigationIconTint="@color/primary"
@@ -47,6 +47,7 @@
                         android:id="@+id/iv_anime"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
+                        android:importantForAccessibility="no"
                         android:src="@drawable/noimage"
                         android:scaleType="centerCrop" />
 

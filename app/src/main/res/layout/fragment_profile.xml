@@ -12,7 +12,7 @@
         android:layout_height="?attr/actionBarSize"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="Profile"
+        app:title="@string/profile"
         app:titleCentered="true"
         app:titleTextAppearance="@style/CustomToolbarTitle" />
 
@@ -45,6 +45,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:importantForAccessibility="no"
                     android:scaleType="centerCrop"
                     android:src="@drawable/noimage" />
 
@@ -135,7 +136,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:fontFamily="@font/opensans_semibold"
-        android:text="Setting"
+        android:text="@string/setting"
         android:textColor="@color/text"
         android:textSize="16sp"
         app:layout_constraintStart_toStartOf="@+id/cardProfile"
@@ -169,7 +170,7 @@
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:contentDescription="Icon language"
+                android:importantForAccessibility="no"
                 app:tint="@color/text"
                 app:srcCompat="@drawable/language_24px"/>
 
@@ -178,7 +179,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_marginStart="8dp"
-                android:text="Change language"
+                android:text="@string/change_language"
                 android:textColor="@color/text"
                 android:fontFamily="@font/opensans_semibold"
                 android:textSize="14sp" />
@@ -188,7 +189,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"
-                android:contentDescription="Arrow change language"
+                android:importantForAccessibility="no"
                 android:src="@drawable/arrow_right_01_stroke_rounded" />
 
         </LinearLayout>

@@ -12,7 +12,7 @@
         android:layout_height="?attr/actionBarSize"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:title="Favourite"
+        app:title="@string/favourite"
         app:titleCentered="true"
         app:navigationIcon="@drawable/arrow_left_02_stroke_rounded"
         app:navigationIconTint="@color/primary"

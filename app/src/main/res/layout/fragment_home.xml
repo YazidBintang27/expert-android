@@ -57,6 +57,7 @@
             android:id="@+id/iv_top_anime"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:importantForAccessibility="no"
             android:src="@drawable/noimage"
             android:scaleType="centerCrop" />
 
@@ -66,7 +67,7 @@
         android:id="@+id/tv_movies_for_you"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Movies for you"
+        android:text="@string/movies_for_you"
         android:fontFamily="@font/opensans_bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/card_image"
