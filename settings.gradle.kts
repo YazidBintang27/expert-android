@@ -21,4 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Yazime"
 include(":app")
- 
+include(":core")
+include(":favourite")

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primary">#FF66BD</color>
+    <color name="text">#2A2A2A</color>
+    <color name="unselected_menu">#CFCFCF</color>
+    <color name="navbar_border">#80FF99D5</color>
+    <color name="transparent">#00FFFFFF</color>
+</resources>
