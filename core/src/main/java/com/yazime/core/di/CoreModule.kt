@@ -13,6 +13,9 @@ import com.yazime.core.domain.repository.AnimeRepository
 import com.yazime.core.domain.usecase.AnimeInteractor
 import com.yazime.core.domain.usecase.AnimeUseCase
 import com.yazime.core.utils.ApiConstant
+import net.sqlcipher.database.SQLiteDatabase
+import net.sqlcipher.database.SupportFactory
+import okhttp3.CertificatePinner
 import okhttp3.OkHttpClient
 import org.koin.dsl.module
 import retrofit2.Retrofit
@@ -36,8 +39,13 @@ private fun provideChuckerInterceptor(context: Context): ChuckerInterceptor {
 }
 
 private fun provideOkHttpClient(chuckerInterceptor: ChuckerInterceptor): OkHttpClient {
+   val hostname = "jikan.moe"
+   val certificatePinner = CertificatePinner.Builder()
+      .add(hostname, "sha256/5vj5ci/XO8naZbBW/5ulm0R7yYBR+r26vVZUzzt1faM==")
+      .build()
    return OkHttpClient.Builder()
       .addInterceptor(chuckerInterceptor)
+      .certificatePinner(certificatePinner)
       .build()
 }
 
@@ -50,11 +58,13 @@ private fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit {
 }
 
 private fun provideDatabase(context: Context): AnimeDatabase {
+   val passphrase: ByteArray = SQLiteDatabase.getBytes("yazime".toCharArray())
+   val factory = SupportFactory(passphrase)
    return Room.databaseBuilder(
       context,
       AnimeDatabase::class.java,
       "anime.db"
-   ).build()
+   ).openHelperFactory(factory).build()
 }
 
 private fun provideDao(animeDatabase: AnimeDatabase): AnimeDao {
