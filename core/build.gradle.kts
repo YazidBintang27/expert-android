@@ -43,9 +43,10 @@ dependencies {
    implementation(libs.androidx.appcompat)
    api(libs.material)
    api(libs.androidx.constraintlayout)
-   api(libs.junit)
-   api(libs.androidx.junit)
-   api(libs.androidx.espresso.core)
+
+   testImplementation(libs.junit)
+   androidTestImplementation(libs.androidx.junit)
+   androidTestImplementation(libs.androidx.espresso.core)
 
    implementation(libs.androidx.room.runtime)
    ksp(libs.androidx.room.compiler)
@@ -71,4 +72,6 @@ dependencies {
 
    api(libs.glide)
    api(libs.lottie)
+
+   debugImplementation(libs.leakcanary.android)
 }

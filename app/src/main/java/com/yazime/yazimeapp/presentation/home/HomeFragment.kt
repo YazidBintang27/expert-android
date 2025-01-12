@@ -75,6 +75,7 @@ class HomeFragment : Fragment() {
                            setHasFixedSize(true)
                            animeAdapter.setData(anime.data!!)
                         }
+
                         lottieLoading.visibility = View.GONE
                         lottieLoading.cancelAnimation()
                         rvAnimeMovies.visibility = View.VISIBLE
@@ -138,6 +139,8 @@ class HomeFragment : Fragment() {
 
    override fun onDestroyView() {
       super.onDestroyView()
+      animeAdapter.setOnItemClickCallback(null)
+      binding.rvAnimeMovies.adapter = null
       _binding = null
    }
 
