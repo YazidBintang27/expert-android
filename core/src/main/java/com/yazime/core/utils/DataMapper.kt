@@ -1,13 +1,13 @@
 package com.yazime.core.utils
 
 import com.yazime.core.data.source.local.entity.AnimeEntity
-import com.yazime.core.data.source.remote.response.AnimeByIdResponse
-import com.yazime.core.data.source.remote.response.AnimeResponse
+import com.yazime.core.data.source.remote.response.anime_by_id_response.AnimeByIdResponse
+import com.yazime.core.data.source.remote.response.anime_response.Data
 import com.yazime.core.domain.model.Anime
 import java.util.ArrayList
 
 object DataMapper {
-   fun mapResponseToEntities(input: List<AnimeResponse.Data>): List<AnimeEntity> {
+   fun mapResponseToEntities(input: List<Data>): List<AnimeEntity> {
       val animeList = ArrayList<AnimeEntity>()
       input.map {
          val anime = AnimeEntity(
@@ -72,7 +72,7 @@ object DataMapper {
          isFavourite = false)
    }
 
-   fun mapResponseSearchToDomain(input: List<AnimeResponse.Data>): List<Anime> {
+   fun mapResponseSearchToDomain(input: List<Data>): List<Anime> {
       val animeList = ArrayList<Anime>()
       input.map {
          val anime = Anime(

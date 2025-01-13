@@ -1,7 +1,7 @@
 package com.yazime.core.data.source.remote.network
 
-import com.yazime.core.data.source.remote.response.AnimeByIdResponse
-import com.yazime.core.data.source.remote.response.AnimeResponse
+import com.yazime.core.data.source.remote.response.anime_by_id_response.AnimeByIdResponse
+import com.yazime.core.data.source.remote.response.anime_response.AnimeResponse
 import com.yazime.core.utils.ApiConstant
 import retrofit2.http.GET
 import retrofit2.http.Path
