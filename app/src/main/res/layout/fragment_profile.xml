@@ -109,7 +109,6 @@
                     app:layout_constraintTop_toBottomOf="@id/tvUserEmail" />
 
                 <TextView
-                    android:id="@+id/tvUserGender"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
@@ -172,7 +171,7 @@
                 android:layout_height="wrap_content"
                 android:importantForAccessibility="no"
                 app:tint="@color/text"
-                app:srcCompat="@drawable/language_24px"/>
+                app:srcCompat="@drawable/language_square_stroke_rounded"/>
 
             <TextView
                 android:layout_width="0dp"
@@ -185,7 +184,6 @@
                 android:textSize="14sp" />
 
             <ImageView
-                android:id="@+id/ivChangeLanguage"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="16dp"

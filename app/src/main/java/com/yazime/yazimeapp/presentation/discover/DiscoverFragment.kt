@@ -1,13 +1,10 @@
 package com.yazime.yazimeapp.presentation.discover
 
-import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.appcompat.widget.SearchView
 import androidx.appcompat.widget.SearchView.OnQueryTextListener
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
@@ -16,7 +13,6 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
 import com.yazime.core.data.source.remote.Resource
 import com.yazime.core.ui.AnimeAdapter
-import com.yazime.yazimeapp.R
 import com.yazime.yazimeapp.databinding.FragmentDiscoverBinding
 import kotlinx.coroutines.launch
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -28,10 +24,6 @@ class DiscoverFragment : Fragment() {
    private val discoverViewModel: DiscoverViewModel by viewModel()
    private lateinit var navController: NavController
    private val animeAdapter: AnimeAdapter = AnimeAdapter()
-
-   override fun onCreate(savedInstanceState: Bundle?) {
-      super.onCreate(savedInstanceState)
-   }
 
    override fun onCreateView(
       inflater: LayoutInflater, container: ViewGroup?,
@@ -97,21 +89,15 @@ class DiscoverFragment : Fragment() {
    private fun getAnimeDetail() {
       animeAdapter.setOnItemClickCallback(object: AnimeAdapter.OnItemClickCallback {
          override fun onItemClicked(id: Int) {
-            val action = DiscoverFragmentDirections.actionDiscoverFragmentToAnimeDetailFragment()
-            action.id = id
-            Log.d(TAG, "Id: $id")
             Toast.makeText(requireContext(), "Not available for now", Toast.LENGTH_SHORT).show()
-//            navController.navigate(action)
          }
       })
    }
 
    override fun onDestroyView() {
       super.onDestroyView()
+      animeAdapter.setOnItemClickCallback(null)
+      binding.rvSearchResult.adapter = null
       _binding = null
-   }
-
-   companion object {
-      const val TAG = "DiscoverFragment"
    }
 }

@@ -1,7 +1,6 @@
 package com.yazime.yazimeapp.favourite.presentation
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -24,10 +23,6 @@ class FavouriteFragment : Fragment() {
    private lateinit var navController: NavController
    private val favouriteViewModel: FavouriteViewModel by viewModel()
    private val animeAdapter: AnimeAdapter = AnimeAdapter()
-
-   override fun onCreate(savedInstanceState: Bundle?) {
-      super.onCreate(savedInstanceState)
-   }
 
    override fun onCreateView(
       inflater: LayoutInflater, container: ViewGroup?,

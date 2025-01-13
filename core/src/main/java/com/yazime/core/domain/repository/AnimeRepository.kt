@@ -1,6 +1,5 @@
 package com.yazime.core.domain.repository
 
-import com.yazime.core.data.source.local.entity.AnimeEntity
 import com.yazime.core.data.source.remote.Resource
 import com.yazime.core.domain.model.Anime
 import kotlinx.coroutines.flow.Flow

@@ -1,6 +1,5 @@
 package com.yazime.core.domain.usecase
 
-import android.util.Log
 import com.yazime.core.data.source.remote.Resource
 import com.yazime.core.domain.model.Anime
 import com.yazime.core.domain.repository.AnimeRepository

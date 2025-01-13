@@ -28,10 +28,6 @@ class HomeFragment : Fragment() {
    private val homeViewModel: HomeViewModel by viewModel()
    private val animeAdapter: AnimeAdapter = AnimeAdapter()
 
-   override fun onCreate(savedInstanceState: Bundle?) {
-      super.onCreate(savedInstanceState)
-   }
-
    override fun onCreateView(
       inflater: LayoutInflater, container: ViewGroup?,
       savedInstanceState: Bundle?
