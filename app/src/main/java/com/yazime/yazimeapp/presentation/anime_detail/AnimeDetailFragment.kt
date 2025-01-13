@@ -121,7 +121,7 @@ class AnimeDetailFragment : Fragment() {
    private fun isFavourite() {
       viewLifecycleOwner.lifecycleScope.launch {
          animeDetailViewModel.animeFavourite.collect { anime ->
-            status = anime.any { it.id == args.id }
+            status = anime.any { it.id!!.equals(args.id) }
             if (!status) {
                binding.icFavourite.setImageResource(R.drawable.favourite_stroke_rounded)
             } else {

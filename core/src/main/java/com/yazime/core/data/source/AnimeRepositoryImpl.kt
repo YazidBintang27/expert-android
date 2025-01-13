@@ -5,7 +5,7 @@ import com.yazime.core.data.source.remote.NetworkBoundSource
 import com.yazime.core.data.source.remote.RemoteDataSource
 import com.yazime.core.data.source.remote.Resource
 import com.yazime.core.data.source.remote.network.ApiResponse
-import com.yazime.core.data.source.remote.response.AnimeResponse
+import com.yazime.core.data.source.remote.response.anime_response.Data
 import com.yazime.core.domain.model.Anime
 import com.yazime.core.domain.repository.AnimeRepository
 import com.yazime.core.utils.DataMapper
@@ -19,7 +19,7 @@ class AnimeRepositoryImpl(
    private val remoteDataSource: RemoteDataSource
 ): AnimeRepository {
    override fun getAllAnime(): Flow<Resource<List<Anime>>> =
-      object : NetworkBoundSource<List<Anime>, List<AnimeResponse.Data>>() {
+      object : NetworkBoundSource<List<Anime>, List<Data>>() {
 
          override suspend fun loadFromDB(): Flow<List<Anime>> {
             return localDataSource.getAllAnime().map {
@@ -31,11 +31,11 @@ class AnimeRepositoryImpl(
             return data.isNullOrEmpty()
          }
 
-         override suspend fun createCall(): Flow<ApiResponse<List<AnimeResponse.Data>>> {
+         override suspend fun createCall(): Flow<ApiResponse<List<Data>>> {
             return remoteDataSource.getAllAnime()
          }
 
-         override suspend fun saveCallResult(data: List<AnimeResponse.Data>) {
+         override suspend fun saveCallResult(data: List<Data>) {
             val animeList = DataMapper.mapResponseToEntities(data)
             localDataSource.insertAnime(animeList)
          }
