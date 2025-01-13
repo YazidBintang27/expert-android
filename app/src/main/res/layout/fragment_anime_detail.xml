@@ -64,6 +64,7 @@
                             android:id="@+id/ic_favourite"
                             android:layout_width="24dp"
                             android:layout_height="24dp"
+                            android:importantForAccessibility="no"
                             android:src="@drawable/favourite_stroke_rounded"
                             android:layout_gravity="center" />
 

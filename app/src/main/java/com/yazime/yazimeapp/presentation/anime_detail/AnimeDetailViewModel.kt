@@ -1,10 +1,7 @@
 package com.yazime.yazimeapp.presentation.anime_detail
 
 import android.util.Log
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.asLiveData
 import androidx.lifecycle.viewModelScope
 import com.yazime.core.data.source.remote.Resource
 import com.yazime.core.domain.model.Anime

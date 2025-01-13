@@ -6,7 +6,8 @@
     android:background="@color/primary"
     android:padding="16dp"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".presentation.splash.SplashFragment">
+    tools:context=".presentation.splash.SplashFragment"
+    tools:ignore="Overdraw">
 
     <ImageView
         android:layout_width="match_parent"

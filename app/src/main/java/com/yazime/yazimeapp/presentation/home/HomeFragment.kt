@@ -28,10 +28,6 @@ class HomeFragment : Fragment() {
    private val homeViewModel: HomeViewModel by viewModel()
    private val animeAdapter: AnimeAdapter = AnimeAdapter()
 
-   override fun onCreate(savedInstanceState: Bundle?) {
-      super.onCreate(savedInstanceState)
-   }
-
    override fun onCreateView(
       inflater: LayoutInflater, container: ViewGroup?,
       savedInstanceState: Bundle?
@@ -75,6 +71,7 @@ class HomeFragment : Fragment() {
                            setHasFixedSize(true)
                            animeAdapter.setData(anime.data!!)
                         }
+
                         lottieLoading.visibility = View.GONE
                         lottieLoading.cancelAnimation()
                         rvAnimeMovies.visibility = View.VISIBLE
@@ -138,6 +135,8 @@ class HomeFragment : Fragment() {
 
    override fun onDestroyView() {
       super.onDestroyView()
+      animeAdapter.setOnItemClickCallback(null)
+      binding.rvAnimeMovies.adapter = null
       _binding = null
    }
 

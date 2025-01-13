@@ -1,8 +1,6 @@
 package com.yazime.yazimeapp.presentation.discover
 
-import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.asLiveData
 import com.yazime.core.data.source.remote.Resource
 import com.yazime.core.domain.model.Anime
 import com.yazime.core.domain.usecase.AnimeUseCase

@@ -1,6 +1,5 @@
 package com.yazime.core.data.source
 
-import android.util.Log
 import com.yazime.core.data.source.local.LocalDataSource
 import com.yazime.core.data.source.remote.NetworkBoundSource
 import com.yazime.core.data.source.remote.RemoteDataSource
